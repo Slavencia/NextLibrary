@@ -2,11 +2,8 @@ import discord
 from discord.ext import commands
 import random
 
-# Создаем бот
-
 bot = commands.Bot(command_prefix='!')
 
-# Определяем возможные варианты
 choices = ["камень", "ножницы", "бумага"]
 
 @bot.event
