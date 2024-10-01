@@ -2,7 +2,12 @@ import discord
 from discord.ext import commands
 import random
 
-bot = commands.Bot(command_prefix='!')
+intents = discord.Intents.default()
+intents.members = True
+intents.message_content = True
+
+bot = commands.Bot(command_prefix='?',  intents=intents)
+
 
 choices = ["камень", "ножницы", "бумага"]
 
@@ -31,4 +36,4 @@ async def rps(ctx, choice: str):
         await ctx.send("Я выиграл!")
 
 
-bot.run('Это я помню что удалять надо :)')
+bot.run('')
